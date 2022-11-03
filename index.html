@@ -38,6 +38,10 @@
             font-family: 'Big Shoulders Display', cursive;
             text-align: end;
             font-size: 60px;
+            width: 300px;
+            border-radius: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(199, 199, 149);
         }
         .number, .sign{
             height: 60px;
@@ -104,7 +108,7 @@
         </h1>
     <section class="outer--calculator">
      <section class="screen">   
-        <div class="screen-font"> </div>
+        <input class="screen-font" id="font" type="text" >
     </section>
         <section class="row ones">
             <div class="number seven">7</div>
@@ -119,7 +123,7 @@
             <div class="sign multiply">x</div>
         </section>
         <section class="row threes">
-            <div class="number one">1</div>
+            <div class="number one" id="one">1</div>
             <div class="number two">2</div>
             <div class="number three">3</div>
             <div class="sign minus">−</div>
@@ -133,25 +137,25 @@
     </section>
     <footer></footer>
     <script>
-        const Num1 = document.querySelector('.one');
-        const Num2 = document.querySelector('.two');
-        const Num3 = document.querySelector('.three');
-        const Num4 = document.querySelector('.four');
-        const Num5 = document.querySelector('.five');
-        const Num6 = document.querySelector('.six');
-        const Num7 = document.querySelector('.seven');
-        const Num8 = document.querySelector('.eight');
-        const Num9 = document.querySelector('.nine');
-        const Num0 = document.querySelector('.zero');
-        const NumD = document.querySelector('.divide');
-        const NumM = document.querySelector('.multiply');
-        const NumS = document.querySelector('.minus');
-        const NumA = document.querySelector('.add');
-        const NumE = document.querySelector('.equale');
-        const dot = document.querySelector('.dot');
+        const Num1 = document.querySelector('.one').innerHTML;
+        const Num2 = document.querySelector('.two').innerHTML;
+        const Num3 = document.querySelector('.three').innerHTML;
+        const Num4 = document.querySelector('.four').innerHTML;
+        const Num5 = document.querySelector('.five').innerHTML;
+        const Num6 = document.querySelector('.six').innerHTML;
+        const Num7 = document.querySelector('.seven').innerHTML;
+        const Num8 = document.querySelector('.eight').innerHTML;
+        const Num9 = document.querySelector('.nine').innerHTML;
+        const Num0 = document.querySelector('.zero').innerHTML;
+        const NumD = document.querySelector('.divide').innerHTML;
+        const NumM = document.querySelector('.multiply').innerHTML;
+        const NumS = document.querySelector('.minus').innerHTML;
+        const NumA = document.querySelector('.add').innerHTML;
+        const NumE = document.querySelector('.equale').innerHTML;
+        const dot = document.querySelector('.dot').innerHTML;
         const screen = document.querySelector('.screen-font');
         const footer = document.querySelector('footer');
-
+        const allNum = document.querySelector('.number');
 
 
 
@@ -160,38 +164,90 @@
         message.classList.add('cookie-message'); //add a class name
         message.innerHTML = 'Welcome to Esibe Vanessa Calculator. I created it with love <button class="btn-close-cookies">Got it</button>'//input a text
         footer.append(message); //input location
-
         // Delelete the cookies
         document
         .querySelector('.btn-close-cookies')
         .addEventListener('click', function(){
             message.remove();
         });
-        // const cookie = document.querySelector('.cookie-message');
-        // cookies.
 
-        // Num1.addEventListener('click', function(e){
-        //     alert('yooooooo')
-        // })
-        const number = function (e){
-            alert('yoooo');
-        };
-        Num1.addEventListener('click', number);
-        Num2.addEventListener('click', number);
-        Num3.addEventListener('click', number);
-        Num4.addEventListener('click', number);
-        Num5.addEventListener('click', number);
-        Num6.addEventListener('click', number);
-        Num7.addEventListener('click', number);
-        Num8.addEventListener('click', number);
-        Num9.addEventListener('click', number);
-        Num0.addEventListener('click', number);
-        dot.addEventListener('click', number);
-        NumD.addEventListener('click', number);
-        NumM.addEventListener('click', number);
-        NumS.addEventListener('click', number);
-        NumE.addEventListener('click', number);
-        NumA.addEventListener('click', number);
+    
+// document.getElementById("one").addEventListener('click', function(){
+//     document.getElementById("font").value = Num1;
+// });
+
+document.querySelector(".one").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = Num1;
+});
+document.querySelector(".two").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = Num2;
+});
+document.querySelector(".three").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = Num3;
+});
+document.querySelector(".four").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = Num4;
+});
+document.querySelector(".five").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = Num5;
+});
+document.querySelector(".six").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = Num6;
+});
+document.querySelector(".seven").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = Num7;
+});
+document.querySelector(".eight").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = Num8;
+});
+document.querySelector(".nine").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = Num9;
+});
+document.querySelector(".zero").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = Num0;
+});
+document.querySelector(".divide").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = NumD;
+});
+document.querySelector(".multiply").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = NumM;
+});
+document.querySelector(".minus").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = NumS;
+});
+document.querySelector(".add").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = NumA;
+});
+document.querySelector(".equale").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = NumE;
+});
+document.querySelector(".dot").addEventListener('click', function(){
+    document.querySelector(".screen-font").value = dot;
+});
+// document.getElementById("one").addEventListener('click', function(){
+//     document.getElementById("font").value = Num;
+// })
+        // const number = function (e){
+        //     document.querySelector('.screen-font').value= Num1;
+
+   
+        // };
+        // Num1.addEventListener('click', number);
+        // Num2.addEventListener('click', number);
+        // Num3.addEventListener('click', number);
+        // Num4.addEventListener('click', number);
+        // Num5.addEventListener('click', number);
+        // Num6.addEventListener('click', number);
+        // Num7.addEventListener('click', number);
+        // Num8.addEventListener('click', number);
+        // Num9.addEventListener('click', number);
+        // Num0.addEventListener('click', number);
+        // dot.addEventListener('click', number);
+        // NumD.addEventListener('click', number);
+        // NumM.addEventListener('click', number);
+        // NumS.addEventListener('click', number);
+        // NumE.addEventListener('click', number);
+        // NumA.addEventListener('click', number);
 
     </script>
 </body>
